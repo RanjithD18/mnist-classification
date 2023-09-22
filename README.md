@@ -100,6 +100,21 @@ metrics[['loss','val_loss']].plot()
 x_test_predictions = np.argmax(model.predict(xtest_scaled), axis=1)
 print(confusion_matrix(ytest,x_test_predictions))
 print(classification_report(ytest,x_test_predictions))
+
+img = image.load_img('test_img.jpeg')
+type(img)
+img = image.load_img('test_img.jpeg')
+img_tensor = tf.convert_to_tensor(np.asarray(img))
+img_28 = tf.image.resize(img_tensor,(28,28))
+img_28_gray = tf.image.rgb_to_grayscale(img_28)
+img_28_gray_scaled = img_28_gray.numpy()/255.0
+plt.imshow(img_28_gray_scaled.reshape(28,28),cmap='gray')
+img_28_gray_inverted = 255.0-img_28_gray
+img_28_gray_inverted_scaled = img_28_gray_inverted.numpy()/255.0
+x_single_prediction = np.argmax(
+    model.predict(img_28_gray_inverted_scaled.reshape(1,28,28,1)),
+     axis=1)
+print(x_single_prediction)
 ~~~
 ## OUTPUT
 
