@@ -120,18 +120,19 @@ print(x_single_prediction)
 
 ### Training Loss, Validation Loss Vs Iteration Plot
 
-Include your plot here
-
+![](https://github.com/RanjithD18/mnist-classification/blob/main/1.png)
+![](https://github.com/RanjithD18/mnist-classification/blob/main/2.png)
 ### Classification Report
 
-Include Classification Report here
+![](https://github.com/RanjithD18/mnist-classification/blob/main/3.png)
 
 ### Confusion Matrix
 
-Include confusion matrix here
+![](https://github.com/RanjithD18/mnist-classification/blob/main/4.png)
 
 ### New Sample Data Prediction
 
-Include your sample input and output for your hand written images.
+![](https://github.com/RanjithD18/mnist-classification/blob/main/5.png)
 
 ## RESULT
+Therefore a model has been successfully created for digit classification using mnist dataset.
